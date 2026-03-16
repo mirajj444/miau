@@ -79,6 +79,15 @@
         background-color: #f0f0f0;
       }
 
+      .content-container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background: white;
+        border: 1px solid #eee;
+        border-radius: 8px;
+      }
+
       /*TABLET*/
       @media (min-width: 768px) and (max-width: 1024px) {
       }
@@ -144,7 +153,7 @@
       </div>
     </header>
 
-    <div class="miau">miau</div>
+    <div class="content-container">miau</div>
 
     <script>
       const menuBtn = document.getElementById("menu-btn");
