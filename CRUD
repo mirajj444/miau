@@ -16,7 +16,9 @@ class Tea extends Model
     protected $fillable = ['name', 'type', 'image'];
 }
 ```
+
 or
+
 ```php
 <?php
 
@@ -80,7 +82,9 @@ php artisan migrate
 ```bash
 php artisan make:controller ExampleController --resource
 ```
+
 !!! add location model in controller
+
 ```php
 use App\Models\Tea;
 ```
@@ -183,7 +187,9 @@ public function destroy(Article $article)
 }
 }
 ```
+
 or
+
 ```php
 <?php
 
@@ -294,6 +300,7 @@ public function manage(Request $request) {
 ```
 
 routes web.php examples
+
 ```php
 <?php
 
@@ -306,7 +313,9 @@ Route::get('/teas/manage', [App\Http\Controllers\TeaController::class, 'manage']
 
 Route::resource('teas', App\Http\Controllers\TeaController::class);
 ```
+
 or
+
 ```php
 <?php
 
@@ -337,7 +346,9 @@ Route::middleware(['auth'])->group(function () {
 require __DIR__.'/auth.php';
 
 ```
+
 or
+
 ```php
 <?php
 
