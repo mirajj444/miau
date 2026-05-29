@@ -1,0 +1,359 @@
+.projects-hero {
+  width: 100%;
+  padding: 60px 140px 10px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.projects-title {
+  margin-bottom: 15px;
+}
+
+.page-desc {
+  max-width: 800px;
+  text-align: left;
+}
+
+.all-projects-section {
+  width: 100%;
+  height: auto;
+  padding: 20px 140px 100px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.projects-section {
+  width: 100%;
+  height: auto;
+  padding: 60px 140px 60px;
+  background-color: #f9fafb;
+  display: flex;
+  justify-content: center;
+}
+
+.projects-container {
+  width: 100%;
+  max-width: 1240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.projects-header .button-large {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+
+  padding: 12px 28px;
+  color: #ffffff;
+  background-color: #ee2f33;
+  border: 1px solid #ee2f33;
+  border-radius: 50px;
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.projects-header .button-large .button-small {
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.projects-header .button-large:hover {
+  background-color: #d6252e;
+  border-color: #d6252e;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.projects-header .button-large:hover .button-icon {
+  transform: translateX(4px);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.project-card {
+  background-color: #f9fafb;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  border-color: #ee2f33;
+}
+
+.project-image {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.06);
+}
+
+.project-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-title {
+  font-size: clamp(16px, 1.3vw, 19px);
+  font-weight: 700;
+  color: #111111;
+  line-height: 1.3;
+  min-height: 2.6em;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.project-address {
+  font-family: "Onest", sans-serif;
+  font-size: 14px;
+  color: #666666;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.project-address i {
+  color: #ee2f33;
+  font-size: 13px;
+}
+
+.button-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: auto;
+
+  padding: 11px 20px;
+  color: #555555;
+  background-color: #f0f0f0;
+  border: 1px solid #e0e0e0;
+  border-radius: 50px;
+
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.button-card i {
+  font-size: 12px;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.project-card:hover .button-card {
+  background-color: #ee2f33;
+  border-color: #ee2f33;
+  color: #ffffff;
+}
+
+.project-card:hover .button-card i {
+  transform: translateX(4px);
+}
+
+@media (min-width: 1201px) {
+  .all-projects-section .projects-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .projects-hero {
+    padding: 60px 40px 10px;
+  }
+
+  .all-projects-section {
+    padding: 20px 40px 80px;
+  }
+
+  .all-projects-section .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .projects-section {
+    padding: 60px 40px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .project-title {
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    min-height: 1.3em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .projects-hero {
+    padding: 60px 40px 10px;
+  }
+
+  .all-projects-section {
+    padding: 20px 40px 80px;
+  }
+
+  .all-projects-section .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .projects-section {
+    padding: 60px 40px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+
+  .project-title {
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    min-height: 1.3em;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-hero {
+    text-align: center;
+    padding: 40px 20px 10px;
+  }
+
+  .hero-wrapper {
+    align-items: center;
+    text-align: center;
+  }
+
+  .page-desc {
+    text-align: center;
+  }
+
+  .all-projects-section {
+    padding: 20px 20px 60px;
+  }
+
+  .all-projects-section .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .projects-section {
+    padding: 40px 20px;
+  }
+
+  .projects-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+
+  .projects-header .big-title {
+    align-self: center;
+    text-align: center;
+  }
+
+  .projects-header .button-large {
+    width: 100%;
+    justify-content: center;
+    order: 2;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+
+  .project-title {
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    min-height: 1.3em;
+  }
+}
